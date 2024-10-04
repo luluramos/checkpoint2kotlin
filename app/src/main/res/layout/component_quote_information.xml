@@ -1,0 +1,41 @@
+<!-- res/layout/text_layout.xml -->
+
+<!-- O elemento LinearLayout organiza seus elementos filhos em uma única coluna ou linha.
+     Neste caso, é utilizado o layout vertical (coluna) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- Definição de um TextView para exibir a etiqueta da taxa ("Rate") -->
+    <TextView
+        android:id="@+id/lbl_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_rate"
+        android:textSize="20sp" />
+
+    <!-- Definição de um TextView para exibir o valor associado à taxa -->
+    <TextView
+        android:id="@+id/lbl_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_value"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <!-- Definição de um TextView para exibir a data associada ao valor -->
+    <TextView
+        android:id="@+id/lbl_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_date" />
+
+    <!-- Inclusão de um layout externo para um botão de atualização -->
+    <include
+        layout="@layout/component_button_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> <!-- Altura ajustada ao conteúdo do botão -->
+</LinearLayout>
